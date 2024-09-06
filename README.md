@@ -110,3 +110,51 @@ For Local Git
 ```
 
 ## Git Branches
+
+1. Create a New Branch
+```
+git branch <branch-name>
+```
+2. Check how many branches we have
+```
+git branch
+```
+3. To rename the branch
+```
+git branch -m main
+```
+4. Switch to a different Branch
+```
+git checkout <branch-name>
+```
+5. To create a new branch and checkout into it simultaneously.
+```
+git checkout -b <branch-name>
+```
+6. To delete the branch. You cannot delete the branch you're currently on it. Before deleting a branch, you need to switch to a different branch.
+```
+git branch -d <branch-name>
+```
+ If you created the new branch and want to add them then, follow the same steps, "git add ." & " git commit -m"your msg" "
+ and make this changes on github on that particualar branch.
+ ```
+ git push origin <branch name>
+ ```
+
+ ## Merging code
+
+ **Way 1**
+
+if someone does PR to your repo and you accepted the PR on github and want to get that changes on your local system.
+
+## Pull commands
+
+used to fetch and download content from a remote repo and immediately update the local repo to match that content.
+```
+git pull origin main
+```
+
+## Resolving the merge conflits
+An event that takes place when Git is unable to automatically resolve differences in code between two commits.
+
+if you added teh code on same line where another code is alredy present then 
