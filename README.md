@@ -143,11 +143,22 @@ git branch -d <branch-name>
 
  ## Merging code
 
- **Way 1**
+**Way 1**
+```
+git diff <branch name>         (to compare commits, branches, files & more)
+```
+```
+git merge <branch name>        (to merge 2 branches)
+```
 
-if someone does PR to your repo and you accepted the PR on github and want to get that changes on your local system.
+ **Way 2**
+
+Create PR
+
+Pull Request: It lets you tell others about changes you've pushed to a branch in a repository on GitHub.
 
 ## Pull commands
+if someone does PR to your repo and you accepted the PR on github and want to get that changes on your local system.
 
 used to fetch and download content from a remote repo and immediately update the local repo to match that content.
 ```
@@ -157,4 +168,63 @@ git pull origin main
 ## Resolving the merge conflits
 An event that takes place when Git is unable to automatically resolve differences in code between two commits.
 
-if you added teh code on same line where another code is alredy present then 
+if you added the code on same line where another code is alredy present then 
+
+If you want to make same chaneges which you have did in main branch and now want to do in another branch let say "feature1"
+
+1. Switch to the feature1 Branch
+```
+git checkout feature1
+```
+2. Merge Changes from main to feature1
+```
+git merge main
+```
+3. Resolve Any Merge Conflicts
+```
+git add .
+```
+```
+git commit -m "Resolved merge conflicts from main branch"
+```
+4. Push the Updated feature1 Branch to GitHub
+```
+git push origin feature1
+```
+## Undoing changes
+
+Case 1: staged changes
+
+If you have staged changes for a specific file and want to unstage just that file, you can use
+```
+git reset <file name>
+```
+To unstage all staged changes but keep the changes in your working directory.
+```
+git reset
+```
+
+Case 2: commited changes (for one commit)
+If you want to undo the last commit but keep the changes in your working directory.
+```
+git reset HEAD~1
+```
+
+Case 3: commited changes (for many commits)
+If you want to undo multiple commits, there are 2 methods depending on whether you want to keep the changes or discard them.
+
+1. Undo Multiple Commits (Keep Changes)
+To undo multiple commits but keep the changes in your working directory.
+```
+git reset <commit-hash>
+```
+2. Undo Multiple Commits (Discard Changes)
+To undo multiple commits and discard all changes. this will reflets undo in local system
+```
+git reset --hard <commit-hash>
+```
+
+Find the Commit Hash
+```
+git log
+```
