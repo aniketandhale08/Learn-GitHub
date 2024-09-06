@@ -228,3 +228,9 @@ Find the Commit Hash
 ```
 git log
 ```
+
+
+## Fork
+A fork is a new repository that shares code and visibility settings with the original "upstream" repository. fork is a rough copy of another repository that lets you work on it independently.
+
+A fork is essentially a personal copy of someone else's repository. It allows you to freely experiment with changes without affecting the original repository.
