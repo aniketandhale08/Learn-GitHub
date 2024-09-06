@@ -1,5 +1,7 @@
 # Learn GitHub
 
+## Create a new repository on the command line.
+
 1. To initilize the repo on local machine.
 ```
 git clone <repo name>
