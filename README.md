@@ -141,6 +141,32 @@ git branch -d <branch-name>
  git push origin <branch name>
  ```
 
+
+7. If you have main branch and now want to create one more branch under "main" branch, we can also add one more branch under "development" branch. it will create hierchy like,
+```
+|--main
+  |--development
+     |--feature1
+```
+```
+git checkout development
+```
+```
+git branch feature
+```
+
+
+## To make any change in any branch & push to GitHub.
+```
+git checkout <branch name>
+
+git add <files_or_folders>
+
+git commit -m "changes what you made"
+
+git push origin <branch name>
+```
+
  ## Merging code
 
 **Way 1**
@@ -156,6 +182,16 @@ git merge <branch name>        (to merge 2 branches)
 Create PR
 
 Pull Request: It lets you tell others about changes you've pushed to a branch in a repository on GitHub.
+
+
+- Fetche the latest changes from the remote repository named "main" into your local repository & merge them.
+
+```
+git fetch origin main
+```
+```
+git merge origin/main
+```
 
 ## Pull commands
 if someone does PR to your repo and you accepted the PR on github and want to get that changes on your local system.
