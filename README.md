@@ -280,3 +280,21 @@ A fork is essentially a personal copy of someone else's repository. It allows yo
 4. git add <file_name>
 5. git commit -m "msg"
 6. git push -u origin main
+
+
+## Upload file to already created repo from local system
+
+1. git clone <repo_link>
+2. cd <repo_name>
+- This changes your current directory to the cloned repository.
+- now copy and paste the file manually that you want to add to any folder in the repo.
+3. git add Code/resources/bg_music_1.wav
+- This stages the file for committing. 
+4. git commit -m "msg"
+5. git push origin main
+
+
+
+
+
+
