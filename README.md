@@ -270,3 +270,13 @@ git log
 A fork is a new repository that shares code and visibility settings with the original "upstream" repository. fork is a rough copy of another repository that lets you work on it independently.
 
 A fork is essentially a personal copy of someone else's repository. It allows you to freely experiment with changes without affecting the original repository.
+
+
+## Create new repo on github and add file from local system
+
+1. git init
+2. git remote add origin <repo_link>
+3. git branch -M main
+4. git add <file_name>
+5. git commit -m "msg"
+6. git push -u origin main
