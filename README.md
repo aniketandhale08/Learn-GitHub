@@ -293,6 +293,15 @@ A fork is essentially a personal copy of someone else's repository. It allows yo
 4. git commit -m "msg"
 5. git push origin main
 
+## Upload file to already created repo from local system without cloning
+
+1. git init
+2. git remote add origin https://github.com/{your-username}/{your-repository}.git
+3. echo "your file content" > yourfile.txt
+4. git add yourfile.txt
+5. git commit -m "Add new file"
+6. git push -u origin master
+
 
 
 
